@@ -1,16 +1,26 @@
 package main
 
-import "math"
 import "fmt"
 
-type Point struct{ X, Y float64 }
+type TwoInts struct {
+	a int
+	b int
+}
 
-func (p Point) Distance(q Point) float64 {
-	return math.Hypot(q.X-p.X, q.Y-p.Y)
+func (tn *TwoInts) AddThem() int {
+	return tn.a + tn.b
+}
+
+func (tn *TwoInts) AddToParam(param int) int {
+	return tn.a + tn.b + param
 }
 
 func main() {
-	p := Point{1, 2}
-	q := Point{3, 4}
-	fmt.Println(p.Distance(q))
+	two1 := new(TwoInts)
+	two1.a, two1.b = 1, 2
+	fmt.Println(two1.AddThem())
+	fmt.Println(two1.AddToParam(2))
+	c := TwoInts{5, 5}
+	fmt.Println(c.AddThem())
+
 }
