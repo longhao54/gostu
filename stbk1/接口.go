@@ -15,9 +15,12 @@ func (sq *Square) Area() float64 {
 }
 
 func main() {
-	sq1 := new(Square)
-	sq1.side = 5
+	//sq1 := new(Square)
+	//sq1.side = 5
 
-	areaIntf := sq1
-	fmt.Println(areaIntf.Area())
+	var sql Shaper = &Square{5}
+	fmt.Println(sql.Area())
+
+	//areaIntf := sq1
+	//fmt.Println(areaIntf.Area())
 }
