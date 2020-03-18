@@ -35,6 +35,6 @@ func main() {
 		fmt.Println(1, t)
 	}
 	if t, ok := areaIntf.(*Circle); ok {
-		fmt.Println(1, t)
+		fmt.Println(2, t)
 	}
 }
